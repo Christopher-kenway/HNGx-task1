@@ -28,9 +28,9 @@ h1, p, h3, a{
 
 .name__image img {
     display: block;
-    height: 80px;
-    width: 100px;
-    margin-right: 20px;
+    height: 150px;
+    width: 170px;
+    margin:  20px 20px;
     border-radius: 10px;
     margin-top: 20px;
 }
