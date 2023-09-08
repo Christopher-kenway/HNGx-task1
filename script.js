@@ -2,7 +2,7 @@ const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", 
 
         const day = new Date();
         let currentDay = days[day.getDay()];
-        document.querySelector('[data-testid="currentDayOfTheWeek"]').innerHTML = `[ Current day: ${currentDay} ]`;
+        document.querySelector('[data-testid="currentDayOfTheWeek"]').innerHTML = currentDay;
        
         const updateCurrentUTCTime = () => {
             const currentTime = new Date();
@@ -12,7 +12,7 @@ const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", 
             const milliseconds = currentTime.getUTCMilliseconds().toString().padStart(3, '0');
             const formattedTime = `${hours}:${minutes}:${seconds}.${milliseconds}`;
         
-            document.querySelector("[data-testid='currentUTCTime']").textContent = `[ Current time (UTC): ${formattedTime} ]`;
+            document.querySelector("[data-testid='currentUTCTime']").textContent = formattedTime;
         };
         
         setInterval(updateCurrentUTCTime, 100);
